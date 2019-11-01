@@ -1,0 +1,40 @@
+.background-color-1 {
+    background: palette(#24acd9, 1) radial-gradient(palette(#24acd9, 1), skyblue);
+    background-size: 100%;
+}
+.background-color-2 {
+    background: palette(#24acd9, 2) radial-gradient(palette(#24acd9, 2), skyblue);
+    background-size: 100%;
+}
+.background-color-3 {
+    background: palette(#24acd9, 3) radial-gradient(palette(#24acd9, 3), skyblue);
+    background-size: 100%;
+}
+.background-color-4 {
+    background: palette(#24acd9, 4) radial-gradient(palette(#24acd9, 4), skyblue);
+    background-size: 100%;
+}
+.background-color-5 {
+    background: palette(#24acd9, 5) radial-gradient(palette(#24acd9, 5), skyblue);
+    background-size: 100%;
+}
+.background-color-6 {
+    background: palette(#24acd9, 6) radial-gradient(palette(#24acd9, 6), skyblue);
+    background-size: 100%;
+}
+.background-color-7 {
+    background: palette(#24acd9, 7) radial-gradient(palette(#24acd9, 7), skyblue);
+    background-size: 100%;
+}
+.background-color-8 {
+    background: palette(#24acd9, 8) radial-gradient(palette(#24acd9, 8), skyblue);
+    background-size: 100%;
+}
+.background-color-9 {
+    background: palette(#24acd9, 9) radial-gradient(palette(#24acd9, 9), skyblue);
+    background-size: 100%;
+}
+.background-color-10 {
+    background: palette(#24acd9, 10) radial-gradient(palette(#24acd9, 10), skyblue);
+    background-size: 100%;
+}

@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+      "parser": "babel-eslint",
+      "ecmaVersion": 2017,
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+      },
+      "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    "strict": 0,
+    "indent": [2, 4],
+    "semi": [2, "always"],
+    "no-param-reassign": 0,
+    "max-len": 0,
+    "global-require": 0,
+    "object-curly-newline": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-unresolved": [0, {"commonjs": true, "amd": true}],
+  }
+}

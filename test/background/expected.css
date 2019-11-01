@@ -1,0 +1,40 @@
+.background-color-1 {
+    background: #f0feff radial-gradient(#f0feff, skyblue);
+    background-size: 100%;
+}
+.background-color-2 {
+    background: #cff9ff radial-gradient(#cff9ff, skyblue);
+    background-size: 100%;
+}
+.background-color-3 {
+    background: #a6f2ff radial-gradient(#a6f2ff, skyblue);
+    background-size: 100%;
+}
+.background-color-4 {
+    background: #77dcf2 radial-gradient(#77dcf2, skyblue);
+    background-size: 100%;
+}
+.background-color-5 {
+    background: #4cc4e6 radial-gradient(#4cc4e6, skyblue);
+    background-size: 100%;
+}
+.background-color-6 {
+    background: #25acd9 radial-gradient(#25acd9, skyblue);
+    background-size: 100%;
+}
+.background-color-7 {
+    background: #1586b3 radial-gradient(#1586b3, skyblue);
+    background-size: 100%;
+}
+.background-color-8 {
+    background: #0a638c radial-gradient(#0a638c, skyblue);
+    background-size: 100%;
+}
+.background-color-9 {
+    background: #024366 radial-gradient(#024366, skyblue);
+    background-size: 100%;
+}
+.background-color-10 {
+    background: #012840 radial-gradient(#012840, skyblue);
+    background-size: 100%;
+}
