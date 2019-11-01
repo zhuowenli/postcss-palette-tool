@@ -8,8 +8,13 @@ import postcss, { list } from 'postcss';
 import rfc from 'reduce-function-call';
 import tinycolor from 'tinycolor2';
 
-const lightColorCount = 5; // 1 - 5
-const darkColorCount = 4; // 7 - 10
+const hueStep = 2; // 色相阶梯
+const lightColorCount = 5; // 浅色数量，主色上 1 - 5
+const darkColorCount = 4; // 深色数量，主色下 7 - 10
+const saturationStep = 16; // 饱和度阶梯，浅色部分
+const saturationStep2 = 5; // 饱和度阶梯，深色部分
+const brightnessStep1 = 5; // 亮度阶梯，浅色部分
+const brightnessStep2 = 15; // 亮度阶梯，深色部分
 
 /**
  * 获取色相渐变
@@ -24,10 +29,9 @@ const darkColorCount = 4; // 7 - 10
  * @returns
  */
 function getHue(hsv, i, isLight) {
-    const hueStep = 2;
-
     let hue;
 
+    // 根据色相不同，色相转向不同
     if (hsv.h >= 60 && hsv.h <= 240) {
         // 冷色调
         // 减淡变亮 色相顺时针旋转 更暖
@@ -62,8 +66,10 @@ function getHue(hsv, i, isLight) {
  * @returns
  */
 function getSaturation(hsv, i, isLight) {
-    const saturationStep = 16;
-    const saturationStep2 = 5;
+    // grey color don't change saturation
+    if (hsv.h === 0 && hsv.s === 0) {
+        return hsv.s;
+    }
 
     let saturation;
     if (isLight) {
@@ -76,9 +82,13 @@ function getSaturation(hsv, i, isLight) {
         // 加深变暗 饱和度缓慢提高
         saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
     }
+
+    // 边界值修正
     if (saturation > 100) {
         saturation = 100;
     }
+
+    // 第一格的 s 限制在 6-10 之间
     if (isLight && i === lightColorCount && saturation > 10) {
         saturation = 10;
     }
@@ -100,9 +110,6 @@ function getSaturation(hsv, i, isLight) {
  * @returns
  */
 function getValue(hsv, i, isLight) {
-    const brightnessStep1 = 5;
-    const brightnessStep2 = 15;
-
     if (isLight) {
         // 减淡变亮
         return Math.round(hsv.v * 100) + brightnessStep1 * i;
@@ -112,7 +119,7 @@ function getValue(hsv, i, isLight) {
     return Math.round(hsv.v * 100) - brightnessStep2 * i;
 }
 
-export default postcss.plugin('postcss-color-palette', () => (css) => {
+export default postcss.plugin('postcss-palette-tool', () => (css) => {
     css.walk((node) => {
         if (node.type === 'decl') {
             if (!/((?:palette)\()(.*)(\))/.test(node.value)) {

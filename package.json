@@ -1,8 +1,8 @@
 {
-  "name": "postcss-color-palette",
+  "name": "postcss-palette-tool",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@git.gaoding.com:lvjian/postcss-color-palette.git",
+  "repository": "git@git.gaoding.com:lvjian/postcss-palette-tool.git",
   "author": {
     "name": "卓文理",
     "url": "https://github.com/zhuowenli"
@@ -16,7 +16,7 @@
   "keywords": [
     "css",
     "color",
-    "palette",
+    "palette-tool",
     "postcss",
     "postcss-plugin"
   ],
