@@ -2,7 +2,7 @@
   "name": "postcss-palette-tool",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@git.gaoding.com:lvjian/postcss-palette-tool.git",
+  "repository": "git@github.com:zhuowenli/postcss-palette-tool.git",
   "author": {
     "name": "卓文理",
     "url": "https://github.com/zhuowenli"
@@ -24,7 +24,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll --runInBand",
     "build": "babel ./src -d dist",
-    "release": "npm run build && babel-node dist"
+    "release": "npm run build && babel-node dist",
+    "npm-publish": "npm run dist && npm publish --registry https://registry.npmjs.org"
   },
   "dependencies": {
     "postcss": "^7.0.21",
