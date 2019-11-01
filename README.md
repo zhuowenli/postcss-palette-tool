@@ -1,8 +1,8 @@
 # postcss-palette-tool
 
-> [PostCSS](https://github.com/postcss/postcss) plugin to mixin monochromatic colors scheme
+> 🎨 [PostCSS](https://github.com/postcss/postcss) plugin to mixin monochromatic colors scheme
 
-This plugin can mix a color based on a variable and then output a new color. 🎨 Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
+Color palettes calculator of [Ant Design](https://ant.design/docs/spec/colors).
 
 ## Install
 
@@ -21,6 +21,8 @@ module.exports = {
     ],
 };
 ```
+
+This plugin can mix a color based on a variable and then output a new color.
 
 before:
 
