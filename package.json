@@ -24,7 +24,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll --runInBand",
     "build": "babel ./src -d dist",
-    "release": "npm run build && babel-node dist",
+    "dist": "npm run build && babel-node dist",
     "npm-publish": "npm run dist && npm publish --registry https://registry.npmjs.org"
   },
   "dependencies": {
