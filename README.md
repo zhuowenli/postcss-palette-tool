@@ -1,4 +1,9 @@
-# postcss-palette-tool
+<h3 align="center">postcss-palette-tool</h3>
+<p align="center">
+    <a target="_blank" href="https://www.npmjs.com/package/postcss-palette-tool" title="Npm">
+        <img src="https://img.shields.io/npm/v/postcss-palette-tool" alt="">
+    </a>
+</p>
 
 > 🎨 [PostCSS](https://github.com/postcss/postcss) plugin to mixin monochromatic colors scheme
 
