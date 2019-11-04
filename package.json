@@ -23,7 +23,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll --runInBand",
-    "dev": "npm run test:watch",
+    "dev": "gulp",
     "build": "babel ./src -d dist",
     "dist": "npm run build && babel-node dist",
     "npm-publish": "npm run dist && npm publish --registry https://registry.npmjs.org"
@@ -42,6 +42,10 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-webserver": "^0.9.1",
     "jest": "^24.9.0"
   }
 }

@@ -1,30 +1,30 @@
 .color-1 {
-    color: palette(#d92424, 1);
+    background: palette(#d92424, 1);
 }
 .color-2 {
-    color: palette(#d92424, 2);
+    background: palette(#d92424, 2);
 }
 .color-3 {
-    color: palette(#d92424, 3);
+    background: palette(#d92424, 3);
 }
 .color-4 {
-    color: palette(#d92424, 4);
+    background: palette(#d92424, 4);
 }
 .color-5 {
-    color: palette(#d92424, 5);
+    background: palette(#d92424, 5);
 }
 .color-6 {
-    color: #d92424;
+    background: #d92424;
 }
 .color-7 {
-    color: palette(#d92424, 7);
+    background: palette(#d92424, 7);
 }
 .color-8 {
-    color: palette(#d92424, 8);
+    background: palette(#d92424, 8);
 }
 .color-9 {
-    color: palette(#d92424, 9);
+    background: palette(#d92424, 9);
 }
 .color-10 {
-    color: palette(#d92424, 10);
+    background: palette(#d92424, 10);
 }

@@ -4,9 +4,11 @@
  * @Date: 2019-11-01 10:54:20
  */
 
-import postcss, { list } from 'postcss';
-import rfc from 'reduce-function-call';
-import tinycolor from 'tinycolor2';
+const postcss = require('postcss');
+const rfc = require('reduce-function-call');
+const tinycolor = require('tinycolor2');
+
+const { list } = postcss;
 
 const hueStep = 2; // 色相阶梯
 const lightColorCount = 5; // 浅色数量，主色上 1 - 5
@@ -119,7 +121,7 @@ function getValue(hsv, i, isLight) {
     return Math.round(hsv.v * 100) - brightnessStep2 * i;
 }
 
-export default postcss.plugin('postcss-palette-tool', () => (css) => {
+module.exports = postcss.plugin('postcss-palette-tool', () => (css) => {
     css.walk((node) => {
         if (node.type === 'decl') {
             if (!/((?:palette)\()(.*)(\))/.test(node.value)) {
