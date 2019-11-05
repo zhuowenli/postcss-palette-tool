@@ -1,0 +1,21 @@
+.color
+    div
+        display: inline-flex
+        width: 32px
+        height: 32px
+        margin-right: 5px
+        margin-bottom: 5px
+        border-radius: 3px
+        vertical-align: top
+        align-items: center
+        justify-content: center
+
+    @for $i from 1 through 24
+        $deg: $i * 15deg
+        $color: adjust-hue(#d92424, $deg)
+
+        @for $index from 1 through 10
+            .color-#{$i}-#{$index}
+                background: palette(#{$color}, #{$index})
+
+

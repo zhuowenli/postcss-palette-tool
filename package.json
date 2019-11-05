@@ -23,14 +23,15 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll --runInBand",
-    "dev": "gulp",
+    "dev": "webpack-dev-server",
     "build": "babel ./src -d dist",
     "dist": "npm run build && babel-node dist",
     "npm-publish": "npm run dist && npm publish --registry https://registry.npmjs.org"
   },
   "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "postcss": "^7.0.21",
-    "postcss-message-helpers": "^2.0.0",
     "reduce-function-call": "^1.0.3",
     "tinycolor2": "^1.4.1"
   },
@@ -39,13 +40,19 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-webserver": "^0.9.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "vue": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
