@@ -8,8 +8,16 @@
 </head>
 <body>
     <div id="app">
-        <div class="color" v-for="deg in 24">
-            <div v-for="inx in indexs" :class="`color-${deg}-${inx}`">
+        <p>自定义颜色</p>
+        <div class="color" v-for="color in colors">
+            <div v-for="inx in indexs" :class="`color-${color}-${inx}`">
+                <template v-if="inx === 6">#</template>
+            </div>
+        </div>
+
+        <p>色轮</p>
+        <div class="hue" v-for="hue in 24">
+            <div v-for="inx in indexs" :class="`hue-${hue}-${inx}`">
                 <template v-if="inx === 6">#</template>
             </div>
         </div>

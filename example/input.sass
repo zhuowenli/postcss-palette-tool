@@ -10,12 +10,26 @@
         align-items: center
         justify-content: center
 
+    @for $index from 1 through 10
+        &-d92424-#{$index}
+            background: palette(#d92424, #{$index})
+        &-d924d9-#{$index}
+            background: palette(#d924d9, #{$index})
+        &-2424d9-#{$index}
+            background: palette(#2424d9, #{$index})
+        &-24d9d9-#{$index}
+            background: palette(#24d9d9, #{$index})
+        &-d95124-#{$index}
+            background: palette(#d95124, #{$index})
+
+.hue
+    @extend  .color
     @for $i from 1 through 24
         $deg: $i * 15deg
         $color: adjust-hue(#d92424, $deg)
 
         @for $index from 1 through 10
-            .color-#{$i}-#{$index}
+            &-#{$i}-#{$index}
                 background: palette(#{$color}, #{$index})
 
 
